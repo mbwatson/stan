@@ -1,8 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Stanley C. Ahalt`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    menuItems: [
+      { text: 'Home', path: '/' },
+      { text: 'Publications', path: '/publications' },
+      { text: 'Patents', path: '/patents' },
+      { text: 'Service', path: '/service' },
+      { text: 'Honors & Awards', path: '/honors' },
+      { text: 'Contact', path: '/contact' },
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,6 +21,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/data`,
+      },
+    },
+    `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

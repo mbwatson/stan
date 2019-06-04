@@ -1,0 +1,34 @@
+[
+  {
+    "name": "chapter",
+    "displayName": "Book Chapters"
+  },
+  {
+    "name": "bulletin",
+    "displayName": "Bulletins"
+  },
+  {
+    "name": "technical-report",
+    "displayName": "Technical Reports"
+  },
+  {
+    "name": "journal-article",
+    "displayName": "Journal Articles"
+  },
+  {
+    "name": "proceedings",
+    "displayName": "Proceedings"
+  },
+  {
+    "name": "project-report",
+    "displayName": "Project Reports"
+  },
+  {
+    "name": "peer-reviewed",
+    "displayName": "Peer Reviewed"
+  },
+  {
+    "name": "editor-reviewed",
+    "displayName": "Editor Reviewed"
+  }
+]
