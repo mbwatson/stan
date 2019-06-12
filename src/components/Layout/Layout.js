@@ -4,15 +4,15 @@ export const Header = styled.header`
     background-color: var(--color-white);
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: stretch;
     padding: 0;
     margin: 0;
     min-height: ${ props => props.compact ? '3rem' : '5rem' };
-    padding-right: ${ props => props.compact ? 0 : '1rem' };
     transition: min-height 250ms, padding-right 250ms;
-    justify-content: space-between;
-    box-shadow 0 0 6px 3px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 999;
+    width: 100%;
+    max-width: 1030px;
 `
 
 export const Main = styled.main`

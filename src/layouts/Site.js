@@ -10,8 +10,6 @@ import { Brand } from '../components/Brand'
 import { Rotator } from '../components/Transformers'
 import { ExpandIcon } from '../components/Icons'
 import { useWindowWidth } from '../hooks/useWindowWidth'
-import '../styles/base.scss'
-import '../styles/globals.scss'
 
 const WINDOW_WIDTH_THRESHOLD = 1080
 const MENU_WIDTH = 250

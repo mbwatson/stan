@@ -2,20 +2,25 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { Title } from '../components/Typography'
 import { List, ListItem } from '../components/List'
-import Img from "gatsby-image/withIEPolyfill"
+import Img from "gatsby-image"
 
 const ProfileImage = styled(Img)`
     border-radius: 1rem;
     margin-bottom: 2rem;
-    -webkit-filter: sepia(50%) opacity(0.9);
     filter: sepia(50%) opacity(0.9) drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
+    z-index: 0;
 `
+
 
 const IndexView = props => {
     console.log(props.data.imageSharp)
     return (
         <Fragment>
-            <ProfileImage fluid={ props.data.imageSharp.childImageSharp.fluid } />
+
+            <ProfileImage
+                fluid={ props.data.imageSharp.childImageSharp.fluid }
+                alt="Stan Ahalt sitting at his desk in his office in front of large windows"
+            />
 
             <Title>Biography</Title>
             
