@@ -1,18 +1,17 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link, StaticQuery, graphql } from 'gatsby'
-import { Layout, Header, Footer, Main, Content } from './Layout'
-import { Button } from '../Button'
-import { Menu, MenuItem } from '../Menu'
-import { Divider } from '../Divider'
-import { Brand } from '../Brand'
-import { Rotator } from '../Transformers'
-import { ExpandIcon, LockIcon, ExitIcon } from '../Icons'
-import { useWindowWidth } from '../../hooks/useWindowWidth'
-import { navigate } from 'gatsby'
-import '../../styles/base.scss'
-import '../../styles/globals.scss'
+import { Layout, Header, Footer, Main, Content } from '../components/Layout'
+import { Button } from '../components/Button'
+import { Menu, MenuItem } from '../components/Menu'
+import { Divider } from '../components/Divider'
+import { Brand } from '../components/Brand'
+import { Rotator } from '../components/Transformers'
+import { ExpandIcon } from '../components/Icons'
+import { useWindowWidth } from '../hooks/useWindowWidth'
+import '../styles/base.scss'
+import '../styles/globals.scss'
 
 const WINDOW_WIDTH_THRESHOLD = 1080
 const MENU_WIDTH = 250
@@ -33,7 +32,7 @@ const MenuToggleButton = styled(Button)`
 `
 
 const isPartiallyActive = path => {
-    return (
+    return typeof window !== 'undefined' ? (
         path === '/'
             ? window.location.pathname === '/'
                 ? true
@@ -41,17 +40,21 @@ const isPartiallyActive = path => {
             : window.location.pathname.startsWith(path)
                 ? true
                 : false
-    )
+    ) : false
 }
 
-export const Page = ({ children }) => {
+export const Site = ({ children }) => {
+    const [windowWidth, setWindowWidth] = useWindowWidth()
     const [menuOpen, setMenuOpen] = useState(false)
-    const windowWidth = useWindowWidth(window.innerWidth)
     const handleToggleMenu = () => setMenuOpen(!menuOpen)
     const isCompact = () => windowWidth < 800
     const [compact, setCompact] = useState(isCompact())
 
     useEffect(() => setCompact(isCompact()), [windowWidth])
+    useEffect(() => {
+        setWindowWidth(typeof window !== 'undefined' ? window.innerWidth : 0)
+    }, [])
+    
     
     return (
         <StaticQuery query={
@@ -115,6 +118,6 @@ export const Page = ({ children }) => {
     )
 }
 
-Page.propTypes = {
+Site.propTypes = {
   children: PropTypes.node.isRequired,
 }

@@ -1,11 +1,10 @@
-import React from 'react'
-
-import { Page } from '../components/Layout'
+import React, { Fragment } from 'react'
+import { Title } from '../components/Typography'
 import { List, ListItem } from '../components/List'
 
-const IndexPage = () => (
-    <Page>
-        <h1>Biography</h1>
+const IndexView = () => (
+    <Fragment>
+        <Title>Biography</Title>
         
         <p>
             Stanley C. Ahalt is director of the Renaissance Computing Institute (RENCI), professor of computer science at the University of North Carolina at Chapel Hill, and the head of the Biomedical Informatics Core for the North Carolina Translational and Clinical Sciences Institute (NC TraCS). He is principal investigator for the Water Science Software Institute project, which seeks to build a cyberinfrastructure for managing, sharing and using water science data. As director of RENCI, he was instrumental in launching two major data science initiatives: The National Consortium for Data Science (NCDS), a public-private partnership to address big data challenges and opportunities in research and business; and iRODS, an effort to develop a branch of the popular integrated Rule-Oriented Data System as enterprise-quality software, complete with rigorous testing and a robust, feature-rich code base.
@@ -19,7 +18,7 @@ const IndexPage = () => (
             Before coming to RENCI in 2009, Dr. Ahalt was executive director of the Ohio Supercomputer Center (OSC) from 2003 – 2009 and a professor in the Department of Electrical and Computer Engineering at The Ohio State University for 22 years.  Ahalt launched several model programs at OSC, including Blue Collar Computing, a national program to bring high performance computing to a wide spectrum of industries and applications, and OSCnet, a leading high-speed research network for K-12 schools, higher education and economic development. He holds a Ph.D. in electrical and computer engineering from Clemson University and master’s and bachelor’s degrees in electrical engineering from Virginia Polytechnic Institute and State University.
         </p>
 
-        <h1>Education</h1>
+        <Title>Education</Title>
 
         <List>
             <ListItem>
@@ -35,7 +34,7 @@ const IndexPage = () => (
                 Virginia Tech (1978)
             </ListItem>
         </List>
-    </Page>
+    </Fragment>
 )
 
-export default IndexPage
+export default IndexView

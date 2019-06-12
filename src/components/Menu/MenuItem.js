@@ -23,13 +23,22 @@ export const MenuItem = styled(Link)`
         width: 0.75rem;
         bottom: 0;
         background-color: transparent;
-        transition: background-color 500ms;
+        transition: background-color 1000ms;
     }
     ${ props => props.partiallyActive === true ? `
-        &::before { background-color: var(--color-primary); }
+        opacity: 1;
+        &::before {
+            background-color: var(--color-primary);
+            filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+        }
     ` : `
+        opacity: 0.85;
         &:hover {
-            &::before { background-color: var(--color-grey); }
+            opacity: 1;
+            &::before {
+                background-color: var(--color-grey);
+                transition: background-color 250ms;
+            }
         }
     `}
 `

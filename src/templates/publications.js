@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import { Page } from '../components/Layout'
+import React, { Fragment } from 'react'
 import { Publication, Citation, TagChipLink } from '../components/Publication'
-import { ChipTray, Chip } from '../components/Chip'
+import { Title, Paragraph, Footnote } from '../components/Typography'
 
 const PublicationsTemplatePage = ({ pageContext }) => {
     const { allTags, tag, publications, count } = pageContext
@@ -11,17 +8,22 @@ const PublicationsTemplatePage = ({ pageContext }) => {
     const getDisplayName = name => allTags.find(tag => tag.name === name).displayName
 
     return (
-        <Page>
-            <ChipTray center style={{ marginBottom: '1rem' }}>
+        <Fragment>
+            <Paragraph center style={{ marginBottom: '1rem' }}>
                 <TagChipLink to="/publications" activeClassName="active">All</TagChipLink>
                 {
                     allTags.map(({ name, displayName }) => (
                         <TagChipLink key={ name } to={ `/publications/${ name }` } activeClassName="active">{ displayName }</TagChipLink>
                     ))
                 }
-            </ChipTray>
-            <h1>Publications</h1>
-            { <h2>{ tag && tag.displayName || 'All' } ({ count })</h2> }
+            </Paragraph>
+            <Title style={{ display: 'flex', justifyContent: 'space-between', margin: 0 }}>
+                <span>Publications</span>
+                <span>{ tag ? tag.displayName : 'All' } ({ count })</span>
+            </Title>
+            <Paragraph right>
+                <Footnote>† Denotes a student co-author</Footnote>
+            </Paragraph>
             <div>
                 {
                     publications.map(({ citation, tags }, i) => (
@@ -29,14 +31,14 @@ const PublicationsTemplatePage = ({ pageContext }) => {
                             <Citation>
                                 { citation }
                             </Citation>
-                            <ChipTray right>
+                            <Paragraph right>
                                 { tags.map((tag, j) => <TagChipLink key={ j } to={ `/publications/${ tag }` }>{ getDisplayName(tag) }</TagChipLink>) }
-                            </ChipTray>
+                            </Paragraph>
                         </Publication>
                     ))
                 }
             </div>
-        </Page>
+        </Fragment>
     )
 }
 

@@ -16,10 +16,3 @@ export const Chip = styled.div`
     margin: 0 0.25rem;
     font-size: 80%;
 `
-
-export const ChipTray = styled.div`
-    padding: 0;
-    text-align: left;
-    ${ props => props.center && 'text-align: center;' }
-    ${ props => props.right && 'text-align: right;' }
-` 

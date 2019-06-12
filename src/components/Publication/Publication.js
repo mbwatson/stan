@@ -9,9 +9,7 @@ export const PublicationContainer = styled.div`
 `
 
 export const Citation = styled.div`
-    margin-bottom: 1rem;
-    color: var(--color-black);
-    line-height: 1.5;
+    line-height: 1.25;
     font-size: 90%;
 `
 

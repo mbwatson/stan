@@ -5,9 +5,9 @@ module.exports = {
     author: `@gatsbyjs`,
     menuItems: [
       { text: 'Home', path: '/' },
+      { text: 'Offices & Service', path: '/service' },
       { text: 'Publications', path: '/publications' },
-      { text: 'Patents', path: '/patents' },
-      { text: 'Service', path: '/service' },
+      { text: 'Presentations', path: '/presentations' },
       { text: 'Honors & Awards', path: '/honors' },
       { text: 'Contact', path: '/contact' },
     ]

@@ -1,12 +1,11 @@
-import React from "react"
-
-import { Layout, Header, Footer, Main, Content } from '../components/Layout/Layout'
+import React, { Fragment } from 'react'
+import { Title } from '../components/Typography'
 
 const NotFoundPage = () => (
-  <Layout>
-    <h1>NOT FOUND</h1>
+  <Fragment>
+    <Title>NOT FOUND</Title>
     <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
+  </Fragment>
 )
 
 export default NotFoundPage

@@ -5,7 +5,7 @@ let defaultWidth
 // This conditional makes the build work.
 // The browser handles this fine during development.
 // However, Node has no window object, so we check here to see if it exists.
-if (typeof window !== `undefined`) {
+if (typeof window !== 'undefined') {
     defaultWidth = window.innerWidth
 }
 
@@ -20,5 +20,5 @@ export const useWindowWidth = (initialWidth = defaultWidth) => {
         }
     })
     
-    return width
+    return [width, setWidth]
 }

@@ -1,11 +1,10 @@
-import React from 'react'
-
-import { Page } from '../components/Layout'
+import React, { Fragment } from 'react'
+import { Title } from '../components/Typography'
 import { List, ListItem } from '../components/List'
 
-const HonorsPage = () => (
-    <Page>
-        <h1>Honors & Awards</h1>
+const HonorsView = () => (
+    <Fragment>
+        <Title>Honors & Awards</Title>
 
         <List>
             <ListItem>
@@ -27,7 +26,7 @@ const HonorsPage = () => (
                 1997 OSU College of Engineering Lumley Research Award
             </ListItem>
         </List>
-    </Page>
+    </Fragment>
 )
 
-export default HonorsPage
+export default HonorsView

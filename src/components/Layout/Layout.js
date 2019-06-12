@@ -39,8 +39,8 @@ export const Footer = styled.footer`
         135deg,
         #333,
         #333 5px,
-        #444 5px,
-        #444 6px
+        #111 5px,
+        #111 6px
     );
     color: var(--color-grey);
     box-shadow 0 0 6px 3px rgba(0, 0, 0, 0.2);
