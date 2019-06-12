@@ -1,5 +1,3 @@
-const path = require(`path`)
-
 module.exports = {
   siteMetadata: {
     title: `Stanley C. Ahalt`,
@@ -27,15 +25,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
+        name: `data`,
         path: `${__dirname}/src/data`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
       },
     },
     `gatsby-plugin-sass`,
