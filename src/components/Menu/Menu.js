@@ -6,11 +6,12 @@ export const Menu = styled.div`
     border-width: 0 1px 0 0;
     border-style: solid;
     border-image: 
-    linear-gradient(
-        to bottom,
-        var(--color-grey) 0%,
-        var(--color-white) 50%
-    ) 1 100%;
+        linear-gradient(
+            to bottom,
+            var(--color-white) 0%,
+            var(--color-grey) 10%,
+            var(--color-white) 50%
+        ) 1 100%;
     background-color: transparent;
     transition: padding-top 250ms;
     padding-top: ${ props => props.compact ? '1rem' : '3rem' };
