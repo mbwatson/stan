@@ -10,19 +10,18 @@ export const Header = styled.header`
     margin: 0;
     min-height: ${ props => props.compact ? '3rem' : '5rem' };
     transition: min-height 250ms, padding-right 250ms;
-    z-index: 999;
-    width: 100%;
+    z-index: 99;
     max-width: 1030px;
 `
 
-export const Main = styled.main`
+export const Main = styled.main.attrs({ className: 'PageMain' })`
     flex: 1;
     display: flex;
     flex-direction: row;
     background-color: var(--color-white);
 `
 
-export const Content = styled.div`
+export const Content = styled.div.attrs({ className: 'PageContent' })`
     padding: ${ props => props.compact ? '2rem' : '3rem' };
     line-height: ${ props => props.compact ? 2 : 1.75 };
     transition: padding 250ms;
@@ -44,15 +43,16 @@ export const Footer = styled.footer`
     );
     color: var(--color-grey);
     box-shadow 0 0 6px 3px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 99;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 `
 
-export const Layout = styled.div`
+export const Layout = styled.div.attrs({ className: 'PageLayout' })`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 `

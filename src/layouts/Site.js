@@ -29,13 +29,24 @@ const MenuToggleButton = styled(Button)`
     }
 `
 
-const isPartiallyActive = path => {
+const isPartiallyActive = 
+    process.env.NODE_ENV === 'development' ? path => {
     return typeof window !== 'undefined' ? (
         path === '/'
             ? window.location.pathname === '/'
                 ? true
                 : false
             : window.location.pathname.startsWith(path)
+                ? true
+                : false
+    ) : false
+} : path => {
+    return typeof window !== 'undefined' ? (
+        path === '/'
+            ? window.location.pathname === '/stan/'
+                ? true
+                : false
+            : window.location.pathname.startsWith('/stan' + path)
                 ? true
                 : false
     ) : false
@@ -71,7 +82,7 @@ export const Site = ({ children }) => {
             `}
         render={
             data => (
-                <Layout style={{ overflow: 'hidden' }}>
+                <Layout>
                     <Header compact={ compact }>
                         <MenuToggleButton visible={ windowWidth < WINDOW_WIDTH_THRESHOLD } onClick={ handleToggleMenu }>
                             { compact ? null : 'Menu' } <Rotator rotated={ menuOpen }><ExpandIcon /></Rotator>
