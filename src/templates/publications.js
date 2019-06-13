@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Publication, Citation, TagChipLink } from '../components/Publication'
 import { Title, Paragraph, Footnote } from '../components/Typography'
 
@@ -8,7 +8,7 @@ const PublicationsTemplatePage = ({ pageContext }) => {
     const getDisplayName = name => allTags.find(tag => tag.name === name).displayName
 
     return (
-        <Fragment>
+        <div>
             <Paragraph center style={{ marginBottom: '1rem' }}>
                 <TagChipLink to="/publications" activeClassName="active">All</TagChipLink>
                 {
@@ -38,7 +38,7 @@ const PublicationsTemplatePage = ({ pageContext }) => {
                     ))
                 }
             </div>
-        </Fragment>
+        </div>
     )
 }
 

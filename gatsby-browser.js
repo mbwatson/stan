@@ -1,19 +1,19 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+// /**
+//  * Implement Gatsby's Browser APIs in this file.
+//  *
+//  * See: https://www.gatsbyjs.org/docs/browser-apis/
+//  */
 
-// You can delete this file if you're not using it
+// // You can delete this file if you're not using it
 
-import React from "react"
+// import React from "react"
 
-import './src/styles/base.scss'
-import './src/styles/globals.scss'
-import { Site } from './src/layouts'
+// // import './src/styles/base.css'
+// // import './src/styles/globals.css'
+// import { Site } from './src/layouts'
 
-export const wrapPageElement = ({ element }) => (
-    <Site>
-        { element }
-    </Site>
-)
+// export const wrapPageElement = ({ element }) => (
+//     <Site>
+//         { element }
+//     </Site>
+// )

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Title } from '../components/Typography'
 import { List, ListItem } from '../components/List'
@@ -11,11 +11,9 @@ const ProfileImage = styled(Img)`
     z-index: 0;
 `
 
-
 const IndexView = props => {
-    console.log(props.data.imageSharp)
     return (
-        <Fragment>
+        <div>
 
             <ProfileImage
                 fluid={ props.data.imageSharp.childImageSharp.fluid }
@@ -52,7 +50,7 @@ const IndexView = props => {
                     Virginia Tech (1978)
                 </ListItem>
             </List>
-        </Fragment>
+        </div>
     )
 }
 

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Header = styled.header`
+    // & * { border: 1px solid #f99; }
     background-color: var(--color-white);
     display: flex;
     flex-direction: row;
@@ -14,14 +15,14 @@ export const Header = styled.header`
     max-width: 1030px;
 `
 
-export const Main = styled.main.attrs({ className: 'PageMain' })`
-    flex: 1;
+export const Main = styled.main`
+    flex-grow: 1;
     display: flex;
     flex-direction: row;
     background-color: var(--color-white);
 `
 
-export const Content = styled.div.attrs({ className: 'PageContent' })`
+export const Content = styled.div`
     padding: ${ props => props.compact ? '2rem' : '3rem' };
     line-height: ${ props => props.compact ? 2 : 1.75 };
     transition: padding 250ms;
@@ -29,6 +30,7 @@ export const Content = styled.div.attrs({ className: 'PageContent' })`
     filter: ${ props => props.pushedAside ? 'opacity(0.25)' : '' };
     transition: filter 250ms, padding 250ms;
     max-width: ${ props => props.maxWidth }px;
+    height: 100%;
 `
 
 export const Footer = styled.footer`
@@ -48,9 +50,11 @@ export const Footer = styled.footer`
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    position: sticky;
+    bottom: 0;
 `
 
-export const Layout = styled.div.attrs({ className: 'PageLayout' })`
+export const Layout = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;

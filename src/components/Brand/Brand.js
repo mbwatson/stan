@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
-export const Brand = styled.div`
-    font-size: ${ props => props.compact ? '150%' : '200%' }
-    padding: ${ props => props.compact ? '1rem' : '2rem' }
+export const Brand = styled.h1`
+    padding: ${ props => props.compact ? '1rem 0 0 0' : '2rem 0 0 0' };
+    font-size: ${ props => props.compact ? '175%' : '200%' };
+    font-weight: 300;
     color: var(--color-black);
     display: flex;
     justify-content: center;

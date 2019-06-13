@@ -614,3 +614,9 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+div[role="group"][tabindex] {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

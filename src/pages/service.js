@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Title } from '../components/Typography'
 
 const ServiceView = () => (
-    <Fragment>
+    <div>
         <Title>Offices & Service</Title>
  
         <h3>Offices</h3>
@@ -86,7 +86,7 @@ const ServiceView = () => (
             <li>Co-Chair, 1998 DoD Signal and Image Processing Forum, Feb 18-19, 1998, Aberdeen, MD</li>
             <li>Orlando, FL</li>
         </ul>
-    </Fragment>
+    </div>
 )
 
 export default ServiceView

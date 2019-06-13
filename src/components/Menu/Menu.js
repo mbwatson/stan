@@ -9,15 +9,16 @@ export const Menu = styled.div`
         linear-gradient(
             to bottom,
             var(--color-white) 0%,
-            var(--color-grey) 10%,
-            var(--color-white) 50%
+            var(--color-grey) 15%,
+            var(--color-grey) 85%,
+            var(--color-white) 100%
         ) 1 100%;
     background-color: transparent;
     transition: padding-top 250ms;
-    padding-top: ${ props => props.compact ? '1rem' : '3rem' };
+    padding: ${ props => props.compact ? '1rem' : '3rem' } 0;
     width: ${ props => props.width }px;
     position: absolute;
     top: 0;
     left: -${ props => props.width }px;
-    height: 100vh;
-`
+    min-height: 60vh;
+ `

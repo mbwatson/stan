@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { Title } from '../components/Typography'
 import { List, ListItem } from '../components/List'
@@ -21,12 +21,12 @@ const presentationsView = () => {
             render={ data => {
                 const presentations = data.presentations.edges.map(({ node }) => node)
                 return (
-                    <Fragment>
+                    <div>
                         <Title>Presentations</Title>
                         <List>
                             { presentations.map(({ citation }) => <ListItem>{ citation }</ListItem>) }
                         </List>
-                    </Fragment>
+                    </div>
                 )
             } }
         />

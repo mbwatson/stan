@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Title } from '../components/Typography'
 import { List, ListItem } from '../components/List'
 
 const HonorsView = () => (
-    <Fragment>
+    <div>
         <Title>Honors & Awards</Title>
 
         <List>
@@ -26,7 +26,7 @@ const HonorsView = () => (
                 1997 OSU College of Engineering Lumley Research Award
             </ListItem>
         </List>
-    </Fragment>
+    </div>
 )
 
 export default HonorsView
