@@ -1,12 +1,35 @@
 import React from 'react'
 import { Title } from '../components/Typography'
+import { EmailLink, PhoneLink } from '../components/Links'
 
 const ContactView = () => (
-    <div>
+    <article>
         <Title>Contact</Title>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quibusdam est fuga dicta placeat nemo necessitatibus illum, minus nihil atque, porro soluta sapiente? Praesentium, recusandae! Alias architecto sequi assumenda aperiam?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi nulla quos perferendis nisi deserunt ab omnis, qui ipsam neque quam repellendus earum adipisci? Expedita quisquam iusto beatae reprehenderit repellat quia.</p>
-    </div>
+        <div>
+            <EmailLink address="ahalt@renci.org" />
+            <EmailLink address="ahalt@cs.unc.edu" />
+        </div>
+
+        <div>
+            <PhoneLink number="(919) 445-9642" tag="(0)" />
+            <PhoneLink number="(919) 360-6131" tag="(C)" />
+        </div>
+        
+        <div>
+            <strong>Renaissance Computing Institute</strong><br/>
+            100 Europa Drive, Suite 540 <br/>
+            Campus Box #7583 <br/>
+            Chapel Hill, NC 27517 <br/>
+        </div>
+
+        <div>
+            <strong>Department of Computer Science</strong><br/>
+            University of North Carolina at Chapel Hill <br/>
+            Campus Box #3175 <br/>
+            239 Sitterson Hall <br/>
+            Chapel Hill, NC 27599 <br/>
+        </div>
+    </article>
 )
 
 export default ContactView

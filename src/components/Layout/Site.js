@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import { Layout, Header, Footer, Main, Content } from '../Layout'
@@ -56,7 +55,7 @@ const isPartiallyActive = process.env.NODE_ENV === 'development'
     }
 
 export default ({ children }) => {
-    const [windowWidth, setWindowWidth] = useWindowWidth()
+    const [windowWidth, ] = useWindowWidth()
     const [menuOpen, setMenuOpen] = useState(false)
     const handleToggleMenu = () => setMenuOpen(!menuOpen)
     const isCompact = () => windowWidth < 800

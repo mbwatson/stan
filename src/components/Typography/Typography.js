@@ -15,6 +15,18 @@ Title.propTypes = {
 
 // 
 
+export const Subtitle = styled.h3`
+    text-align: left;
+    ${ props => props.center && 'text-align: center;' }
+    ${ props => props.right && 'text-align: right;' }
+`
+
+Subtitle.propTypes = {
+    children: PropTypes.node.isRequired,
+}
+
+// 
+
 export const Paragraph = styled.div`
     text-align: left;
     ${ props => props.center && 'text-align: center;' }

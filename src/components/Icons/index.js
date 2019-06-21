@@ -1,4 +1,7 @@
+export * from './IconWrapper'
+export * from './EmailIcon'
 export * from './ExitIcon'
 export * from './ExpandIcon'
 export * from './LockIcon'
+export * from './PhoneIcon'
 export * from './SearchIcon'

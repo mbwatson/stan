@@ -1,56 +1,89 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Title } from '../components/Typography'
-import { List, ListItem } from '../components/List'
 import Img from "gatsby-image"
+import { Columns, Column } from '../components/Columns'
+import { EmailLink, PhoneLink } from '../components/Links'
+import { IconWrapper, EmailIcon, PhoneIcon } from '../components/Icons'
 
 const ProfileImage = styled(Img)`
     border-radius: 1rem;
+    margin: 0 auto;
     margin-bottom: 2rem;
-    filter: sepia(50%) opacity(0.9) drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
     z-index: 0;
+    transition: max-width 250ms;
+    max-width: 90%;
+    @media (min-width: 600px) {
+        max-width: 60%;
+    }
+`
+
+const ContactBlock = styled.div`
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    white-space: nowrap;
+    & svg {
+        transition: opacity 250ms;
+        opacity: 0.33;
+    }
+    &:hover svg {
+        opacity: 0.66;
+    }
+    &.text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        marginLeft: '1rem',
+    }
 `
 
 const IndexView = props => {
     return (
-        <div>
-
+        <article>
             <ProfileImage
                 fluid={ props.data.imageSharp.childImageSharp.fluid }
                 alt="Stan Ahalt sitting at his desk in his office in front of large windows"
             />
 
-            <Title>Biography</Title>
-            
-            <p>
-                Stanley C. Ahalt is director of the Renaissance Computing Institute (RENCI), professor of computer science at the University of North Carolina at Chapel Hill, and the head of the Biomedical Informatics Core for the North Carolina Translational and Clinical Sciences Institute (NC TraCS). He is principal investigator for the Water Science Software Institute project, which seeks to build a cyberinfrastructure for managing, sharing and using water science data. As director of RENCI, he was instrumental in launching two major data science initiatives: The National Consortium for Data Science (NCDS), a public-private partnership to address big data challenges and opportunities in research and business; and iRODS, an effort to develop a branch of the popular integrated Rule-Oriented Data System as enterprise-quality software, complete with rigorous testing and a robust, feature-rich code base.
-            </p>
+            <Columns width="80%" center break={ 480 }>
+                <Column center as={ ContactBlock }>
+                    <IconWrapper pad="0.5rem">
+                        <EmailIcon pad="1rem"/>
+                    </IconWrapper>
+                    <div className="text">
+                        <EmailLink address="ahalt@renci.org" />
+                        <EmailLink address="ahalt@cs.unc.edu" />
+                    </div>
+                </Column>
+                <Column center as={ ContactBlock }>
+                    <IconWrapper pad="0.5rem">
+                        <PhoneIcon pad="1rem" />
+                    </IconWrapper>
+                    <div className="text">
+                        <PhoneLink number="(919) 445-9642" tag="(0)" />
+                        <PhoneLink number="(919) 360-6131" tag="(C)" />
+                    </div>
+                </Column>
+            </Columns>
 
-            <p>
-                Dr. Ahalt serves as a member of the executive board of the <a href="https://irods.org" target="_blank" rel="noopener noreferrer">iRODS Consortium</a>, an international group focused on long-term sustainability of the iRODS data management platform. He is also a co-PI with the DataNet Federation Consortium, a National Science Foundation project to prototype an integrated platform for sharing, using and managing data across distances and scientific fields. Other leadership roles include past chair of the Coalition for Academic Scientific Computing, former co-chair of the Ohio Broadband Council, extramural member of the National Cancer Institute’s Advanced Biomedical Computing Center’s Oversight Committee, and member of the Council on Competitiveness High Performance Computing Advisory Committee. He has authored or co-authored more than 120 technical papers and been principal investigator or co-principal investigator on research grants totaling more than $17 million. His recent research publications have focused on decoupling data through encryption.
-            </p>
+            <Columns center break={ 680 }>
+                <Column center as={ ContactBlock }>
+                    <strong>Renaissance Computing Institute</strong>
+                    100 Europa Drive, Suite 540 <br/>
+                    Campus Box #7583 <br/>
+                    Chapel Hill, NC 27517 <br/>
+                </Column>
+                <Column center as={ ContactBlock }>
+                    <strong>Department of Computer Science</strong>
+                    University of North Carolina at Chapel Hill <br/>
+                    Campus Box #3175 <br/>
+                    239 Sitterson Hall <br/>
+                    Chapel Hill, NC 27599 <br/>
+                </Column>
+            </Columns>
 
-            <p>
-                Before coming to RENCI in 2009, Dr. Ahalt was executive director of the Ohio Supercomputer Center (OSC) from 2003 – 2009 and a professor in the Department of Electrical and Computer Engineering at The Ohio State University for 22 years.  Ahalt launched several model programs at OSC, including Blue Collar Computing, a national program to bring high performance computing to a wide spectrum of industries and applications, and OSCnet, a leading high-speed research network for K-12 schools, higher education and economic development. He holds a Ph.D. in electrical and computer engineering from Clemson University and master’s and bachelor’s degrees in electrical engineering from Virginia Polytechnic Institute and State University.
-            </p>
-
-            <Title>Education</Title>
-
-            <List>
-                <ListItem>
-                    Ph.D. in  Electrical  and Computer Engineering
-                    Clemson University (1986)
-                </ListItem>
-                <ListItem>
-                    M.S. in Electrical Engineering
-                    Virginia Tech (1980)
-                </ListItem>
-                <ListItem>
-                    B.S. in Electrical Engineering
-                    Virginia Tech (1978)
-                </ListItem>
-            </List>
-        </div>
+        </article>
     )
 }
 
