@@ -11,7 +11,6 @@ module.exports = {
       { text: 'Publications', path: '/publications' },
       { text: 'Presentations', path: '/presentations' },
       { text: 'Honors & Awards', path: '/honors' },
-      { text: 'Contact', path: '/contact' },
     ]
   },
   plugins: [
