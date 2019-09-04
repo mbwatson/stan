@@ -31,6 +31,18 @@ export const Content = styled.div`
     transition: filter 250ms, padding 250ms;
     max-width: ${ props => props.maxWidth }px;
     height: 100%;
+    & a {
+        font-weight: bold;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        color: var(--color-primary-dark);
+        border-bottom-color: transparent;
+        transition: color 250ms, border-bottom-color 250ms;
+        &:hover {
+            color: var(--color-primary);
+            border-bottom-color: var(--color-primary);
+        }
+    }
 `
 
 export const Footer = styled.footer`

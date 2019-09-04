@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Chip = styled.div`
     background-color: var(--color-white);
     color: var(--color-primary);
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--color-primary) !important;
     &.active {
         background-color: var(--color-primary);
         color: var(--color-white);

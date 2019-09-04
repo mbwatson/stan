@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const PublicationContainer = styled.div`
     padding: 1rem;
     border-radius: 0.25rem;
-    box-shadow 0 0 6px 0 rgba(0, 0, 0, 0.1);
+    box-shadow 0 0 6px 0 rgba(0, 0, 0, 0.2);
     margin-bottom: 1rem;
 `
 
