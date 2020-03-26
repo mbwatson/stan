@@ -5,7 +5,10 @@ import { Title, Paragraph, Footnote } from '../components/Typography'
 const PublicationsTemplatePage = ({ pageContext }) => {
     const { allTags, tag, publications, count } = pageContext
     
-    const getDisplayName = name => allTags.find(tag => tag.name === name).displayName
+    const getDisplayName = name => {
+        const matchingTag = allTags.find(tag => tag.name === name)
+        return matchingTag ? matchingTag.displayName : name
+    }
 
     return (
         <div>
@@ -28,9 +31,7 @@ const PublicationsTemplatePage = ({ pageContext }) => {
                 {
                     publications.map(({ citation, tags }, i) => (
                         <Publication key={ i }>
-                            <Citation>
-                                { citation }
-                            </Citation>
+                            <Citation dangerouslySetInnerHTML={{ __html: citation }} />
                             <Paragraph right>
                                 { tags.map((tag, j) => <TagChipLink key={ j } to={ `/publications/${ tag }` }>{ getDisplayName(tag) }</TagChipLink>) }
                             </Paragraph>
