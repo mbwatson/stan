@@ -1,6 +1,6 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import Img from "gatsby-image"
 import { Title } from '../components/Typography'
 import { List, ListItem } from '../components/List'
 import BackgroundImage from 'gatsby-background-image'
