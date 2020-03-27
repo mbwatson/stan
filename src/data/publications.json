@@ -159,31 +159,31 @@
 
   {
     "citation": "Pfaff, E.R., Champion, J., Bradford, R.L., Clark, M., Xu, H., Fecho, K., Krishnamurthy, A., …Ahalt, S. (2019). Fast Healthcare Interoperability Resources (FHIR) as a meta model to integrate common data models: Development of a tool and quantitative validation study. <em>JMIR Med Inform</em>, 7(4), 15199. doi: 10.2196/15199.",
-    "tags": ["peer-reviewed"]
+    "tags": ["peer-reviewed", "journal-article"]
   },
   {
     "citation": "Ahalt, S.C., Chute, C.G., Fecho, K., Glusman, G.,  Hadlock, J., …and Taylor, C.O. (2019). Clinical data: Sources and types, regulatory constraints, applications. <em>Clinical and Translational Science.</em>",
-    "tags": ["peer-reviewed"]
+    "tags": ["peer-reviewed", "journal-article"]
   },
   {
     "citation": "Fecho, K., Pfaff, E., Xu, H., Champion, J., Cox, S., Stillwell, L., Peden, D.B., …and Ahalt, S.C. (2019). A novel approach for exposing and sharing clinical data: The Translator Integrated Clinical and Environmental Exposures Service. <em>Journal of the American Medical Informatics Association</em>.",
-    "tags": ["peer-reviewed"]
+    "tags": ["peer-reviewed", "journal-article"]
   },
   {
     "citation": "The Biomedical Data Translator Consortium (2019). Toward a universal biomedical data translator. <em>Clinical and Translation Science</em>, 12(2), 86-90. doi:10.1111/cts.12591.",
-    "tags": ["peer-reviewed"]
+    "tags": ["peer-reviewed", "journal-article"]
   },
   {
     "citation": "The Biomedical Data Translator Consortium (2019). The Biomedical Data Translator Program: Conception, culture, and community. <em>Clinical and Translational Science</em>, 12(2), 91-94. doi: 10.1111/cts.12592.",
-    "tags": ["peer-reviewed"]
+    "tags": ["peer-reviewed", "journal-article"]
   },
   {
     "citation": "Aikat, J., Carsey, T.M., Fecho, K., Jeffay, K., Krishnamurthy, A.K., Mucha, P.J., Rajasekar, A., and Ahalt, S.C. (2017). Scientific training in the era of big data: A new pedagogy for graduate education. <em>Big Data</em>, 5(1), 12-18. doi:10.1089/big.2016.0014.",
-    "tags": ["peer-reviewed"]
+    "tags": ["peer-reviewed", "journal-article"]
   },
   {
     "citation": "Evans, J.P., Wilhelmsen, K.C., Berg, J., Schmitt, C.P., Krishnamurthy, A.K., Fecho, K., & Ahalt, S.C. (2016). A new framework and prototype solution for clinical decision support and research in genomics and other data-intensive fields of medicine. <em>eGEMs</em>, 4(1), 1198. doi: 10.13063/2327-9214.1198",
-    "tags": ["peer-reviewed"]
+    "tags": ["peer-reviewed", "journal-article"]
   },
   {
     "citation": "Mane KK, Schmitt C, Owen P, Gersing K, Ahalt SC, Wilhelmsen K, \"Data-driven approaches to augment clinical decision in EMR Era\", IEEE Xplore Digital Library, May 28, 2012, Cognititve Information Processing (CIP), 3rd International Workshop; Doi: 10.1109/CIP.6232907",
@@ -351,7 +351,7 @@
   },
   {
     "citation": "Jung, T.P., Krishnamurthy, A.K., Ahalt, S.C., DeJong, K.D., Lee, S. and Beckman, M.E. Relating formant to vowel constriction features extracted from pellet positions. 122nd meeting of the Acoustical Society of America. <em>Journal of the Acoustical Society of America</em>. Houston, TX.",
-    "tags": ["peer-reviewed", "jouranl-article"]
+    "tags": ["peer-reviewed", "journal-article"]
   },
   {
     "citation": "Ahalt, S.C., Chen, P.†, Chou, C.T.†, and Jung, T.P.† (1992). Implementation of a vector quantization codebook design technique based on a competitive learning artificial neural network. <em>The Journal of Supercomputing</em>, 5, 307-330.",
