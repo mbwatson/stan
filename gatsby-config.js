@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Stanley C. Ahalt`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Dr. Stan Ahalt is the Director of the Renaissance Computing Institute (RENCI) at UNC-Chapel Hill. As Director, he leads a team of research scientists, software and network engineers, data science specialists, and visualization experts who work closely with faculty research teams at UNC, Duke, and NC State as well as with partners across the country.`,
     website: `https://mbwatson.github.io/stan`,
-    author: `@gatsbyjs`,
+    author: `Matt Watson`,
     menuItems: [
       { text: 'Home', path: '/' },
       { text: 'Biography', path: '/biography' },
