@@ -1,5 +1,5 @@
 import React from 'react'
-import { Title } from '../components/Typography'
+import { Title, Heading, Subheading } from '../components/Typography'
 import { useService } from '../hooks'
 
 const ServiceView = () => {
@@ -13,21 +13,21 @@ const ServiceView = () => {
              
             <section id="offices">
                 <article id="offices">
-                    <h3>Offices</h3>
+                    <Heading>Offices</Heading>
                     <ul>{ offices.map((item, i) => <li key={ `offices-${i}` }>{ item }</li> )}</ul>
                 </article>
             </section>
 
             <section id="services">
-                <h3>Service</h3>
+                <Heading>Service</Heading>
 
                 <article id="board-membership">
-                    <h4>Boards' Memberships</h4>
+                    <Subheading>Boards' Memberships</Subheading>
                     <ul>{ service.boards.map((item, i) => <li key={ `service-${i}` }>{ item }</li> )}</ul>
                 </article>
 
                 <article id="committee-membership">
-                    <h4>Committees' Memberships</h4>
+                    <Subheading>Committees' Memberships</Subheading>
                     
                     <h5>Current</h5>
                     <ul>{ service.committees.current.map((item, i) => <li key={ `current-committees-${i}` }>{ item }</li> )}</ul>
@@ -37,13 +37,13 @@ const ServiceView = () => {
                 </article>
 
                 <article id="chairing">
-                    <h4>Committee and Conference Chairing, Co-Chairing</h4>
+                    <Subheading>Committee and Conference Chairing, Co-Chairing</Subheading>
                 
                     <ul>{ service.chairing.map((item, i) => <li key={ `current-committees-${i}` }>{ item }</li> )}</ul>
                 </article>
 
                 <article id="government-service">
-                    <h4>Service to the State and Nation</h4>
+                    <Subheading>Service to the State and Nation</Subheading>
 
                     <h5>Service to State Institutions</h5>
                     <ul>{ service.government.state.map((item, i) => <li key={ `current-committees-${i}` }>{ item }</li> )}</ul>
@@ -53,7 +53,7 @@ const ServiceView = () => {
                 </article>
 
                 <article id="university-service">
-                    <h4>Service to the University</h4>
+                    <Subheading>Service to the University</Subheading>
                     
                     <h5>Departmental Committees</h5>
                     <ul>{ service.university.departmental.map((item, i) => <li key={ `current-committees-${i}` }>{ item }</li> )}</ul>

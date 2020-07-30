@@ -5,6 +5,8 @@ import PropTypes from 'prop-types'
 
 export const Title = styled.h2`
     text-align: left;
+    color: var(--color-dark);
+    font-weight: normal;
     ${ props => props.center && 'text-align: center;' }
     ${ props => props.right && 'text-align: right;' }
 `
@@ -17,11 +19,39 @@ Title.propTypes = {
 
 export const Subtitle = styled.h3`
     text-align: left;
+    color: var(--color-ash);
     ${ props => props.center && 'text-align: center;' }
     ${ props => props.right && 'text-align: right;' }
 `
 
 Subtitle.propTypes = {
+    children: PropTypes.node.isRequired,
+}
+
+// 
+
+export const Heading = styled.h3`
+    text-align: left;
+    color: var(--color-primary-dark);
+    font-weight: normal;
+    ${ props => props.center && 'text-align: center;' }
+    ${ props => props.right && 'text-align: right;' }
+`
+
+Heading.propTypes = {
+    children: PropTypes.node.isRequired,
+}
+
+// 
+
+export const Subheading = styled.h3`
+    text-align: left;
+    color: var(--color-primary-darker);
+    ${ props => props.center && 'text-align: center;' }
+    ${ props => props.right && 'text-align: right;' }
+`
+
+Subheading.propTypes = {
     children: PropTypes.node.isRequired,
 }
 
