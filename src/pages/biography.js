@@ -53,7 +53,7 @@ const ContactView = props => (
         <section>
             <List>
                 <ListItem>
-                    Ph.D. in  Electrical  and Computer Engineering
+                    Ph.D. in Electrical and Computer Engineering
                     Clemson University (1986)
                 </ListItem>
                 <ListItem>

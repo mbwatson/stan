@@ -2,35 +2,19 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { Title } from '../components/Typography'
 import { List, ListItem } from '../components/List'
+import { usePresentations } from '../hooks'
 
-const presentationsQuery = graphql`
-    query presentationsQuery {
-        presentations: allPresentationsJson {
-            edges {
-                node {
-                    citation
-                }
-            }
-        }
-    }`
+const PresentationsView = () => {
+    const presentations = usePresentations()
 
-const presentationsView = () => {
     return (
-        <StaticQuery
-            query={ presentationsQuery }
-            render={ data => {
-                const presentations = data.presentations.edges.map(({ node }) => node)
-                return (
-                    <div>
-                        <Title>Presentations</Title>
-                        <List>
-                            { presentations.map(({ citation }) => <ListItem>{ citation }</ListItem>) }
-                        </List>
-                    </div>
-                )
-            } }
-        />
+        <div>
+            <Title>Presentations</Title>
+            <List>
+                { presentations.map(({ citation }) => <ListItem>{ citation }</ListItem>) }
+            </List>
+        </div>
     )
 }
 
-export default presentationsView
+export default PresentationsView

@@ -1,2 +1,6 @@
+export * from './use-honors'
+export * from './use-service'
 export * from './useScrollPosition'
 export * from './useWindowWidth'
+export * from './use-presentations'
+export * from './use-publications'
