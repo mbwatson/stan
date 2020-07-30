@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{YoZw:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),r=t.n(a),l=(t("Wbzz"),t("REs1")),c=t("ITHA"),u=t("gGy4");n.default=function(){var e=Object(u.b)();return r.a.createElement("div",null,r.a.createElement(l.e,null,"Presentations"),r.a.createElement(c.a,null,e.map((function(e){var n=e.citation;return r.a.createElement(c.b,null,n)}))))}}}]);
+//# sourceMappingURL=component---src-pages-presentations-js-698d1af3b72d788ef3fd.js.map

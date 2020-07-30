@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{UizL:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),r=t.n(a),l=t("REs1"),u=t("ITHA"),c=t("gGy4");n.default=function(){var e=Object(c.a)();return r.a.createElement("div",null,r.a.createElement(l.e,null,"Honors & Awards"),r.a.createElement(u.a,null,e.map((function(e){var n=e.year,t=e.title;return r.a.createElement(u.b,null,n," - ",t)}))))}}}]);
+//# sourceMappingURL=component---src-pages-honors-js-ca67c8bbc632186bd16a.js.map
