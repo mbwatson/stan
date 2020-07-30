@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 // 
 
 export const Title = styled.h2`
-    text-align: left;
     color: var(--color-dark);
     font-weight: normal;
+    text-align: left;
     ${ props => props.center && 'text-align: center;' }
     ${ props => props.right && 'text-align: right;' }
 `
@@ -18,8 +18,8 @@ Title.propTypes = {
 // 
 
 export const Subtitle = styled.h3`
-    text-align: left;
     color: var(--color-ash);
+    text-align: left;
     ${ props => props.center && 'text-align: center;' }
     ${ props => props.right && 'text-align: right;' }
 `
@@ -31,8 +31,8 @@ Subtitle.propTypes = {
 // 
 
 export const Heading = styled.h3`
-    text-align: left;
     color: var(--color-primary-dark);
+    text-align: left;
     font-weight: normal;
     ${ props => props.center && 'text-align: center;' }
     ${ props => props.right && 'text-align: right;' }
@@ -44,9 +44,9 @@ Heading.propTypes = {
 
 // 
 
-export const Subheading = styled.h3`
-    text-align: left;
+export const Subheading = styled.h4`
     color: var(--color-primary-darker);
+    text-align: left;
     ${ props => props.center && 'text-align: center;' }
     ${ props => props.right && 'text-align: right;' }
 `
@@ -58,8 +58,8 @@ Subheading.propTypes = {
 // 
 
 export const Paragraph = styled.div`
-    text-align: left;
     ${ props => props.center && 'text-align: center;' }
+    text-align: left;
     ${ props => props.right && 'text-align: right;' }
 `
 
