@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import { Layout, Header, Footer, Main, Content } from '../Layout'
@@ -58,13 +58,13 @@ export default ({ children }) => {
     const [windowWidth, ] = useWindowWidth()
     const [menuOpen, setMenuOpen] = useState(false)
     const handleToggleMenu = () => setMenuOpen(!menuOpen)
-    const isCompact = () => windowWidth < 800
+    const isCompact = useCallback(() => windowWidth < 800, [windowWidth])
     const [compact, setCompact] = useState(isCompact())
 
     useEffect(() => {
         setCompact(isCompact())
         if (windowWidth > WINDOW_WIDTH_THRESHOLD) setMenuOpen(false)
-    }, [windowWidth])
+    }, [windowWidth, isCompact])
     // useEffect(() => {
     //     setTimeout(setWindowWidth(typeof window !== 'undefined' ? window.innerWidth : 0), null)
     // }, [])

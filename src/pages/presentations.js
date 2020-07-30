@@ -1,5 +1,4 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import { Title } from '../components/Typography'
 import { List, ListItem } from '../components/List'
 import { usePresentations } from '../hooks'
